@@ -1,15 +1,13 @@
 /* jshint undef:false*/
 (function() {
   'use strict';
-  describe('common.factories.<%= pascalCaseFactoryName %> module', function() {
-    var controller;
-    beforeEach(module('common.factories.<%= pascalCaseFactoryName %>'));
+  describe('common.factories.<%= camelCaseFactoryName %> module', function() {
+    beforeEach(module('common.factories.<%= camelCaseFactoryName %>'));
 
-
-    describe('<%= pascalCaseFactoryName %>', function() {
-      it('should exist', function( <%= pascalCaseFactoryName %> ) {
-        expect( <%= pascalCaseFactoryName %> ).toBeDefined();
-      });
+    describe('<%= camelCaseFactoryName %>', function() {
+      it('should exist', inject(function( <%= camelCaseFactoryName %> ) {
+        expect( <%= camelCaseFactoryName %> ).toBeDefined();
+      }));
     });
   });
 })();

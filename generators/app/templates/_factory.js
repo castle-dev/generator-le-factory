@@ -2,16 +2,16 @@
   'use strict';
 
   /**
-   * @name  <%= pascalCaseFactoryName %>
+   * @name  <%= camelCaseFactoryName %>
    * @description Factory
    */
-  function <%= pascalCaseFactoryName %> (storage, $q) {
+  function <%= camelCaseFactoryName %> () {
     return {
       exampleMethod: function(param) {
         console.log(param);
       }
     };
   }
-  angular.module('<%= pascalCaseFactoryName %>', [])
-    .factory('<%= pascalCaseFactoryName %>', <%= pascalCaseFactoryName %> );
+  angular.module('common.factories.<%= camelCaseFactoryName %>', [])
+    .factory('<%= camelCaseFactoryName %>', <%= camelCaseFactoryName %> );
 })();
