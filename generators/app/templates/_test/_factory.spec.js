@@ -3,7 +3,7 @@
   'use strict';
   describe('common.factories.<%= pascalCaseFactoryName %> module', function() {
     var controller;
-    beforeEach(module('common.controllers.<%= controllerName %>'));
+    beforeEach(module('common.factories.<%= pascalCaseFactoryName %>'));
 
 
     describe('<%= pascalCaseFactoryName %>', function() {
