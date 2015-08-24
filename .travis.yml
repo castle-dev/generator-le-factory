@@ -1,0 +1,21 @@
+language: node_js
+before_install:
+  - npm install -g gulp mocha
+  - npm install
+  - npm test
+install:
+  - 'git config --global user.email "travis-ci@entercastle.com"'
+  - 'git config --global user.name "Travis Castle"'
+script:
+  - gulp docs
+  - cd docs
+  - git init
+  - 'git remote add origin "https://${GH_TOKEN}@github.com/castle-dev/generator-le-factory.git"'
+  - git checkout -B gh-pages
+  - git add .
+  - 'git commit -m "Updating documentation"'
+  - 'git push origin gh-pages -fq > /dev/null'
+env:
+  global:
+    - ENVIRONMENT=staging
+    - secure: xX1kJMAFrc55HHLroFdVUIr6tbJnsUbubqkKYmGSPJh7El/ScACg/u7M8QRHYSspe2/EzVHqTG3XD95hbIrFLmcTyAT6W2n9y/4mNv2eDl7T8kjwC4ybb9y1PSSWi/u+3idJ5eXKbzlNo2j97DWrBVuOyO+1goNYQHWqjzuGr/pQo4BqGI35bMRr4AZpYZablosdBBYOEHNZIkJwNA8cuZtifNz/xbNFerwt5yFP8qR5L6g9F1a5Qcb+8h4aXEcSWH0Zkgkq5qwgi6CFowwjtPdkCkYGSt4//mRrSjp+xX5RASJ0N9MqHnVVQz1P3lgSjFs91YlHrhe+rE1WUQBt2r5QxSz/pw/zvvSoPiERPFqBaSqAwv6x01x7o7eLRv+EjVIaHSzxj67jssFFr9poWesCgCH8/ujLOtNQimwnj2DmzoC/irooVBWpTQqYrU3NDuUZjOyvGVK+DPFoknVMVrTOV+MWtHU5sV+jZjHspazbtpSHrc3tlqhcymJ/z4/GKeTrp7gDMAFy/LHVFRGiV7knxtXtd/hOVHcUzcHhN/Ionvm7Z18QCA5ukAXGCTpVZcUmyv1gowwA5tMBLEyQ8Yu0KE9cWZ29UHd5q8hH/VN6Ejh1hjJOeYFN1wB38oIvycPvNcwysm1WNPTLjHTvrixkRulPxXsjv2PmcsJ0WhU=
