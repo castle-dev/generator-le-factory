@@ -1,6 +1,6 @@
 {
   "name": "generator-le-factory",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Make all necesarry files and file changes to add a page to an angular project. ",
   "license": "MIT",
   "main": "app/index.js",
