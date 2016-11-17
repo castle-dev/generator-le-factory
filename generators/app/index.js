@@ -67,7 +67,6 @@ var CastleFactoryGenerator = yeoman.generators.Base.extend({
     answers.pascalCaseFactoryName = formatter.pascal(answers.factoryName);
     answers.camelCaseFactoryName = formatter.camel(answers.factoryName);
     copyTemplate('_factory.js', 'client/src/common/factories/' + answers.paramCaseFactoryName + '.js');
-    copyTemplate('_test/_factory.spec.js', 'client/test/unit/common/factories/' + answers.paramCaseFactoryName + '.spec.js');
     addToIndex('tmp/common/factories/' + answers.paramCaseFactoryName + '.js');
     addToAppModules('common.factories.' + answers.camelCaseFactoryName);
   },
