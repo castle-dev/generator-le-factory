@@ -10,14 +10,16 @@ generator-le-factory
 ## Usage
 
 ```
-  //TODO
+
+  In order for the factory generator to work, your angular project must have a 'client/index.html' and a 'client/src/app/app.js' file. You can optionally add hooks for the generator to include the new files and modules in those two files with the hooks "<!-- YOEMAN HOOK -->" and "/*--YEOMAN-HOOK--*/" respectively.
+
+  To generate a new factory, cd into your porject and run 'yo le-factory' from the command line. You will be prompted for the name.
+  
 ```
 
 ## Tests
 
-* `npm test` to run unit tests once
-* `gulp tdd` to run unit and e2e tests when tests change
-* `gulp coverage` to run unit tests and create a code coverage report
+* `npm test` to run unit tests
 
 ## Contributing
 
@@ -25,4 +27,4 @@ Please follow the project's [conventions](https://github.com/castle-dev/generato
 
 ## Release History
 
-* 0.1.0 Initial release
+* 0.0.0 Initial release
